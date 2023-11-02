@@ -1,0 +1,11 @@
+.IconButton {
+  cursor: pointer;
+
+  //disabilita il click sull'icona bookmark quando la finestra di dialogo è aperta
+  &_disabled {
+    cursor: default;
+    pointer-events: none;
+    stroke: gray;
+    stroke-opacity: 0.7;
+  }
+}

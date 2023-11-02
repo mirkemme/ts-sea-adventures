@@ -1,0 +1,67 @@
+.DropdownSelect {
+  position: relative;
+  width: 280px;
+  height: 40px;
+
+  &__dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 280px;
+    height: 40px;
+    padding-left: $paddingSmall;
+    border-radius: $roundedMinimal;
+    border: 1px solid rgb(36, 36, 36);
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: rem(20px);
+      height: rem(20px);
+      right: $paddingSmall;
+      top: 50%;
+      transform: translateY(-50%);
+      background: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="iso-8859-1"%3F><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --><svg fill="%23000000" height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve"><path id="XMLID_225_" d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"/></svg>');
+      background-size: rem(10px) rem(10px);
+      background-repeat: no-repeat;
+      background-position: center center;
+      transition: transform 0.25s ease;
+    }
+  }
+
+  &__arrowTransform::after {
+    transform: rotate(180deg) translateY(50%);
+  }
+
+  &__options {
+    width: 100%;
+    height: 0;
+    position: absolute;
+    padding: $paddingSmall;
+    background-color: white;
+    border: 1px solid rgb(36, 36, 36);
+    border-top: none;
+    list-style-type: none;
+    transition: all 0.5s ease;
+    visibility: hidden;
+    opacity: 0;
+
+    &__option {
+      cursor: pointer;
+      padding-bottom: $paddingExtraSmall;
+      transition: all 0.25s ease;
+
+      &:hover {
+        color: colorShade(white, $text-primary, 50%);
+      }
+    }
+  }
+
+  &__isOpen {
+    height: auto;
+    visibility: visible;
+    opacity: 1;
+    z-index: 99;
+  }
+}

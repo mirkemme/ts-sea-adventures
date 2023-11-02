@@ -1,0 +1,11 @@
+.CardList {
+  width: 100%;
+  height: auto;
+  padding: $paddingMedium 0;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}

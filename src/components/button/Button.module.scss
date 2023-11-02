@@ -1,0 +1,13 @@
+.Button {
+  width: 100%;
+  height: rem(52px);
+  margin-top: auto; //posiziona l'elemento in basso rispetto al suo contenitore
+  max-width: rem(360px);
+  border-radius: $roundedExtraSmall;
+  background-color: $btn-main;
+  color: white;
+  border: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}

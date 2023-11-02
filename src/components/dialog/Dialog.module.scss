@@ -1,0 +1,35 @@
+.Dialog {
+  @include flexboxCenterColumn;
+  position: absolute;
+  top: 0;
+  width: rem(300px);
+  height: rem(60px);
+  z-index: 100;
+  padding: $paddingExtraSmall;
+  background-color: $background-primary;
+  border-radius: $roundedExtraSmall;
+  transform: translateY(-100%);
+  transition: all 0.25s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+
+  &__isOpen {
+    top: $paddingExtraSmall;
+    transform: translateY(0);
+    opacity: 0.8;
+    visibility: visible;
+  }
+
+  &__text {
+    color: $text-tertiary;
+  }
+}
+
+// MEDIA QUERY LAPTOP AND DESKTOP
+@media screen and (min-width: 768px) {
+  .Dialog {
+    &__isOpen {
+      top: $paddingSmall;
+    }
+  }
+}

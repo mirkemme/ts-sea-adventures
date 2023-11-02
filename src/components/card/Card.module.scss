@@ -1,0 +1,93 @@
+.Card {
+  width: rem(360px);
+  height: rem(360px);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 5px;
+  padding: $paddingMedium;
+  background-color: $background-secondary;
+  border-radius: $roundedExtraSmall;
+
+  &__price {
+    width: 100%;
+
+    span {
+      font-weight: 700;
+      font-size: rem(22px);
+    }
+  }
+
+  &__locality {
+    width: 100%;
+    margin-top: -10px;
+  }
+
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
+
+  &__wrapperRight {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+  }
+
+  &__departure {
+    width: auto;
+    color: $text-secondary;
+    text-transform: uppercase;
+  }
+
+  &__departureLocality {
+    width: auto;
+    margin-top: -6px;
+  }
+
+  &__boat {
+    width: auto;
+    font-weight: 700;
+    justify-self: flex-start;
+  }
+
+  &__duration {
+    width: auto;
+    font-weight: 700;
+  }
+
+  &__date {
+    font-weight: 600;
+  }
+
+  &__time {
+    color: $text-secondary;
+    margin-top: -6px;
+  }
+
+  &__arrowIcon {
+    @include flexboxCenter();
+    width: auto;
+    height: 100%;
+  }
+
+  &__cabins {
+    font-weight: 600;
+  }
+
+  &__availability {
+    color: $text-secondary;
+
+    span {
+      font-weight: 600;
+    }
+  }
+}
