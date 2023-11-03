@@ -17,11 +17,13 @@ import Banner from "../components/banner";
 import logoIcon from "../../public/assets/images/logo.svg";
 // types and interfaces
 import { IDropdownList } from "../interfaces/IDropdownList";
+import { IDataProps } from "../interfaces/IComponentsProps";
 import { CardData } from "../utils/types/typeCard";
 import { Port } from "../utils/types/typeCard";
-import { IDataProps } from "../interfaces/IProps";
 // URL API
 export const API_BASE_URL = "https://api.npoint.io/fb404a223a346cab07ec";
+// mock
+import {dataMock} from "../mock/data";
 
 export default function Home({ data }: IDataProps) {
   const [inputDropdownValue, setInputDropdownValue] = useState<{label: string}>({ label: "Mostra tutti" });
@@ -72,7 +74,7 @@ export default function Home({ data }: IDataProps) {
         </div>
       </header>
       <main className={styles.main}>
-        <Hero />
+        <Hero title={"Sea adventures"} subtitle={"Boat Tours & Water Sports in Italy"} />
         <section className={styles.content}>
           <div className={styles.container}>
             <DropdownSelect
@@ -107,10 +109,17 @@ export default function Home({ data }: IDataProps) {
 
 /* SERVER SIDE RENDERING */
 export async function getServerSideProps() {
-  const res = await fetch(API_BASE_URL);
-  const data = await res.json();
-
-  return {
-    props: { data },
-  };
+  try {
+    const res = await fetch(API_BASE_URL);
+    const data = await res.json();
+    return {
+      props: { data },
+    };
+  } catch (error) {
+    console.log(error);
+    const data = dataMock;
+    return {
+      props: {data},
+    }
+  }
 }

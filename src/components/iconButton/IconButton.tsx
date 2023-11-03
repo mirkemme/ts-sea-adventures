@@ -1,4 +1,4 @@
-import { IButtonProps } from "../../interfaces/IProps";
+import { IButtonProps } from "../../interfaces/IComponentsProps";
 import { LuPlusSquare, LuMinusSquare } from "react-icons/lu";
 import styles from "./IconButton.module.scss";
 

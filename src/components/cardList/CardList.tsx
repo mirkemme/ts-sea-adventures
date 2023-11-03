@@ -3,7 +3,7 @@ import Card from "../card/Card";
 import styles from "./CardList.module.scss";
 import Button from "../button";
 import { CardData } from "../../utils/types/typeCard";
-import { ICardListProps } from "../../interfaces/IProps";
+import { ICardListProps } from "../../interfaces/IComponentsProps";
 
 const CardList = ({ data, isButtonVisible = false }: ICardListProps) => {
   const [show, setShow] = useState<number>(8);

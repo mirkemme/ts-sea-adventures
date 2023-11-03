@@ -1,6 +1,6 @@
 import CardList from "../cardList";
 import styles from "./GroupShow.module.scss";
-import { IGroupShowProps } from "../../interfaces/IProps";
+import { IGroupShowProps } from "../../interfaces/IComponentsProps";
 
 const GroupShow = ({ data, portList }: IGroupShowProps) => {
 
