@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import CardList from "../cardList";
 import styles from "./Itinerary.module.scss";
-import { IDataProps } from "../../interfaces/IProps";
+import { IDataProps } from "../../interfaces/IComponentsProps";
 import { CardData } from "../../utils/types/typeCard";
 
 const Itinerary = ({ data }: IDataProps) => {

@@ -26,6 +26,11 @@ export interface IGroupShowProps {
     portList: Port[];
 }
 
+export interface IHeroProps {
+    title: string,
+    subtitle?: string,
+}
+
 export interface IDialogProps {
     isDialogOpen: boolean,
     label: string,

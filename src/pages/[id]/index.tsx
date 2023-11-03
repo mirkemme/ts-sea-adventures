@@ -19,7 +19,7 @@ import styles from "./index.module.scss";
 import IconButton from "../../components/iconButton";
 import Dialog from "../../components/dialog";
 // interfaces
-import { ICardProps } from "../../interfaces/IProps";
+import { ICardProps } from "../../interfaces/IComponentsProps";
 // functions
 import { formatTime } from "../../utils/fn/formatTime";
 import { formatDate } from "../../utils/fn/formatDate";
@@ -28,6 +28,8 @@ import { fade } from "../../utils/fn/fade";
 import { API_BASE_URL } from "..";
 const COUNT_FADE_TIMEOUT_MS: number = 100;
 const DIALOG_MODAL_FADE_TIMEOUT_MS: number = 2000;
+// mock
+import { dataMock } from "../../mock/data";
 
 export default function Tour({ data }: ICardProps) {
   const router = useRouter();
@@ -220,10 +222,17 @@ export default function Tour({ data }: ICardProps) {
 
 export async function getServerSideProps(context) {
   const queryId = context.query.id;
-  const res = await fetch(`${API_BASE_URL}/${queryId}`);
-  const data = await res.json();
-
-  return {
-    props: { data },
-  };
+  try {
+    const res = await fetch(`${API_BASE_URL}/${queryId}`);
+    const data = await res.json();
+    return {
+      props: { data },
+    }
+  } catch (error) {
+    console.log(error);
+    const data = dataMock[queryId];
+    return {
+      props: { data },
+    }
+  }
 }

@@ -1,4 +1,4 @@
-import { IDialogProps } from "../../interfaces/IProps";
+import { IDialogProps } from "../../interfaces/IComponentsProps";
 import styles from "./Dialog.module.scss";
 
 const Dialog = ({ isDialogOpen, label }: IDialogProps) => {

@@ -5,7 +5,7 @@ import { formatDate } from "../../utils/fn/formatDate";
 import styles from "./Card.module.scss";
 import arrowIcon from "../../../public/assets/icons/right-arrow-alt.svg";
 import Button from "../button";
-import { ICardProps } from "../../interfaces/IProps";
+import { ICardProps } from "../../interfaces/IComponentsProps";
 
 const Card = ({ data }: ICardProps) => {
   const router = useRouter();

@@ -1,5 +1,5 @@
 import styles from "./Button.module.scss";
-import { IButtonProps } from "../../interfaces/IProps";
+import { IButtonProps } from "../../interfaces/IComponentsProps";
 
 const Button = ({ handleClick, label }: IButtonProps) => {
   return (

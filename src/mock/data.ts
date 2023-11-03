@@ -1,4 +1,4 @@
-export const data = [
+export const dataMock = [
   {
     id: 0,
     code: "8142-90724",

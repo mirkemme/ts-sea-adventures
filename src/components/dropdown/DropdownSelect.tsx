@@ -1,6 +1,6 @@
 import styles from "./DropdownSelect.module.scss";
 import { updateDropdownList } from "../../utils/fn/updateDropdownList";
-import { IDropdownSelectProps } from "../../interfaces/IProps";
+import { IDropdownSelectProps } from "../../interfaces/IComponentsProps";
 import { Option } from "../../interfaces/IDropdownGroup";
 
 const DropdownSelect = (props: IDropdownSelectProps) => {
