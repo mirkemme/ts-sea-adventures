@@ -26,8 +26,8 @@ import { formatDate } from "../../utils/fn/formatDate";
 import { fade } from "../../utils/fn/fade";
 // constants
 import { API_BASE_URL } from "..";
-const COUNT_FADE_TIMEOUT_MS = 100;
-const DIALOG_MODAL_FADE_TIMEOUT_MS = 2000;
+const COUNT_FADE_TIMEOUT_MS: number = 100;
+const DIALOG_MODAL_FADE_TIMEOUT_MS: number = 2000;
 
 export default function Tour({ data }: ICardProps) {
   const router = useRouter();
