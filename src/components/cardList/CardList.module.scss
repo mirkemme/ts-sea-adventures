@@ -1,11 +1,19 @@
 .CardList {
+  @include flexboxCenterColumn();
   width: 100%;
   height: auto;
   padding: $paddingMedium 0;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
+  gap: rem(18px);
+
+  &__container {
+    width: 100%;
+    height: auto;
+    // padding-bottom: $paddingMedium;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
 }
