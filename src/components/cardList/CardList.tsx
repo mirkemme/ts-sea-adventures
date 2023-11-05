@@ -11,10 +11,12 @@ const CardList = ({ data, isButtonVisible = false }: ICardListProps) => {
   const onHandleClick = () => setShow((prev) => prev + 8);
   return (
     <section className={styles.CardList}>
+      <div className={styles.CardList__container}>
       {data.slice(0, show).map((item: CardData) => (
         <Card data={item} key={item.id} />
-      ))}
-      {isButtonVisible && <Button handleClick={onHandleClick} label={"Show more"} />}
+        ))}
+      </div>
+      {isButtonVisible && data.length > show &&  <Button handleClick={onHandleClick} label={"Show more"} />}
     </section>
   );
 };
