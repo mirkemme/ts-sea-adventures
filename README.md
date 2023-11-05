@@ -10,5 +10,5 @@ L'applicazione è stata sviluppata con un design responsivo utilizzando la libre
 
 ## Obiettivo del progetto
 
-La web app è un conversione in TypeScript di un altro progetto che avevo realizzato precedentemente in Javascript (e che trovate pinnato nel mio profilo).
+La web app è una conversione in TypeScript di un altro progetto che avevo realizzato precedentemente in Javascript (e che trovate sempre nelle mie repo).
 Con questa versione ho voluto quindi aggiungere la tipizzazione stretta con l'uso di tipi e interfacce per il controllo del flusso di dati, variabili, parametri e costanti.
